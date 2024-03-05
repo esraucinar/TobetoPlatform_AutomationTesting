@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "4b4575a8-1039-4621-a7ba-927d5163c27f",
+		"name": "swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32035502"
+	},
+	"item": [
+		{
+			"name": "TCkimlik no formatı yanlış/uyarı mesajı",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 1,\n  \"nationalIdentificationNumber\": \"12345678911\",\n  \"aboutMe\": \"string\",\n  \"birthDate\": \"2024-02-19T14:38:09.062Z\",\n  \"phoneNumber\": \"555-661-9720\",\n  \"profilePhotoPath\": \"string\",\n  \"shareProfile\": true,\n  \"profileLinkUrl\": \"string\",\n  \"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "En fazla üç adet sosyal medya hesabı eklenebilir.",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"accountId\": 2,\n  \"socialMediaPlatformId\": 3,\n  \"priority\": 1,\n  \"link\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/AccountSocialMediaPlatforms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"AccountSocialMediaPlatforms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aynı mail adresi ile kayıt olma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userForRegisterDto\": {\n    \"email\": \"urhan_esra@hotmail.com\",\n    \"password\": \"123456\",\n    \"firstName\": \"esra\",\n    \"lastName\": \"cinar\"\n  },\n  \"nationalIdentificationNumber\": \"12345678918\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Auth/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Auth",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deneyimlerim",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Bitiş tarihi başlangıç tarihinden önce olamaz.",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 2,\n  \"cityId\": 1,\n  \"companyName\": \"AKBANK\",\n  \"jobTitle\": \"Yazılım ve Kalite Test Uzmanı\",\n  \"industry\": \"Teknoloji\",\n  \"startingDate\": \"2010-01-10\",\n  \"endingDate\": \"2009-01-11\",\n  \"isCurrentlyWorking\": true,\n  \"description\": \"Yazılım\",\n  \"isActive\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5278/api/Experiences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5278",
+							"path": [
+								"api",
+								"Experiences"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Başarılı Deneyim Ekleme İşlemi",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 2,\n  \"cityId\": 1,\n  \"companyName\": \"TRT\",\n  \"jobTitle\": \"Yazılım Test Uzmanı\",\n  \"industry\": \"Teknoloji\",\n  \"startingDate\":\"1976-01-10\",\n  \"endingDate\": \"1992-01-10\",\n  \"isCurrentlyWorking\": true,\n  \"description\": \"yazılım\",\n  \"isActive\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5278/api/Experiences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5278",
+							"path": [
+								"api",
+								"Experiences"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "companyName boş bırakılamaz uyarısı",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 2,\n  \"cityId\": 1,\n  \"companyName\": \"\",\n  \"jobTitle\": \"Yazılım Test Uzmanı\",\n  \"industry\": \"Teknoloji\",\n  \"startingDate\":\"1976-01-10\",\n  \"endingDate\": \"1992-01-10\",\n  \"isCurrentlyWorking\": true,\n  \"description\": \"yazılım\",\n  \"isActive\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5278/api/Experiences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5278",
+							"path": [
+								"api",
+								"Experiences"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 19 Feb 2024 18:19:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "Core.CrossCuttingConcerns.Exceptions.Types.ValidationException: Validation failed: \n -- CompanyName: 'Company Name' must not be empty.\n   at Core.Application.Pipelines.Validation.RequestValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/esraurhan/Desktop/TOB/TobetoPlatformCleanArchitecture/src/corePackages/Core.Application/Pipelines/Validation/RequestValidationBehavior.cs:line 33\n   at Core.Application.Pipelines.Logging.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/esraurhan/Desktop/TOB/TobetoPlatformCleanArchitecture/src/corePackages/Core.Application/Pipelines/Logging/LoggingBehavior.cs:line 38\n   at Core.Application.Pipelines.Caching.CacheRemovingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/esraurhan/Desktop/TOB/TobetoPlatformCleanArchitecture/src/corePackages/Core.Application/Pipelines/Caching/CacheRemovingBehavior.cs:line 26\n   at Core.Application.Pipelines.Authorization.AuthorizationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in /Users/esraurhan/Desktop/TOB/TobetoPlatformCleanArchitecture/src/corePackages/Core.Application/Pipelines/Authorization/AuthorizationBehavior.cs:line 35\n   at WebAPI.Controllers.ExperiencesController.Add(CreateExperienceCommand createExperienceCommand) in /Users/esraurhan/Desktop/TOB/TobetoPlatformCleanArchitecture/src/tobetoPlatformCleanArchitecture/WebAPI/Controllers/ExperiencesController.cs:line 20\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\n--- End of stack trace from previous location ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\n\nHEADERS\n=======\nAccept: */*\nConnection: keep-alive\nHost: localhost:5278\nUser-Agent: PostmanRuntime/7.36.3\nAccept-Encoding: gzip, deflate, br\nAuthorization: Bearer eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA\nContent-Type: application/json\nCookie: refreshToken=le6O9biyVfI1FoghtygYqa7j1k%2Fqe3%2BRCBPTi7ak8OQ%3D\nContent-Length: 264\nPostman-Token: 13002680-6cc7-41bf-b40d-c538b7413a1f\n"
+				}
+			]
+		},
+		{
+			"name": "CompanyName ismini değiştirme",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 11,\n  \"accountId\": 2,\n  \"cityId\": 1,\n  \"companyName\": \"ABC\",\n  \"jobTitle\": \"Yazılım ve test uzmanı\",\n  \"industry\": \"Bankacılık\",\n  \"startingDate\": \"2024-02-19\",\n  \"endingDate\": \"2024-02-20\",\n  \"isCurrentlyWorking\": true,\n  \"description\": \"string\",\n  \"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yetkinlik ekleyebilme işlemi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"accountId\": 2,\n  \"capabilityId\": 1,\n  \"priority\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/AccountCapabilities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"AccountCapabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "yetkinlik değiştirme işlemi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not A(Brand\";v=\"99\", \"Google Chrome\";v=\"121\", \"Chromium\";v=\"121\""
+					},
+					{
+						"key": "Referer",
+						"value": "https://tobeto.com/"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI5ODcsImlhdCI6MTcwODM2NzgwNCwiZXhwIjoxNzA4NTQwNjA0fQ.CCDC-itSHOI4esXeBc80DRQDm0ImEQwZy6cmST73YLI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 21,\n  \"name\": \"figma\",\n  \"priority\": 1,\n  \"visibility\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Capabilities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Capabilities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "En fazla üç adet sosyal medya eklenebilir.",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"accountId\": 2,\n  \"socialMediaPlatformId\": 2,\n  \"priority\": 1,\n  \"link\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/AccountSocialMediaPlatforms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"AccountSocialMediaPlatforms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Telefon numarası ile ilgili uyarılar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": 2,\n  \"nationalIdentificationNumber\": \"12345678902\",\n  \"aboutMe\": \"string\",\n  \"birthDate\": \"1992-10-26\",\n  \"phoneNumber\": \"\",\n  \"profilePhotoPath\": \"string\",\n  \"shareProfile\": true,\n  \"profileLinkUrl\": \"string\",\n  \"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get/accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDgzNTM0MzQsImV4cCI6MTcwODM5NjYzNCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.ojt8Jj1lpIY3TRl2i7tEieunvcH6h0G2zb6UYflLLk8XZGfxDNRV9wZtmHHS117YXk5FlmEah7DfZe9ABx29hA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5278/api/Accounts?PageIndex=1&PageSize=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Accounts"
+					],
+					"query": [
+						{
+							"key": "PageIndex",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eklenen yeteneği silme",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJlbWFpbCI6InRlc3RAdXNlci5uZXQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiVGVzdCBVc2VyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJuYmYiOjE3MDg0NTYxMTcsImV4cCI6MTcwODQ5OTMxNywiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.CcRpzoE35EvY_c3wgBaGrKHlyd8B917FZX7qrbPr4NCHfgs6c5s3DVLDV7XcEahCVeslybyIJe_0uqN6zSRg1w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5278/api/Capabilities/24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5278",
+					"path": [
+						"api",
+						"Capabilities",
+						"24"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
