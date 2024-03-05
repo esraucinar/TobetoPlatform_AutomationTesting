@@ -1,0 +1,16 @@
+BASE_URL="https://tobeto.com"
+PROFIL_BILGILERIM_URL="https://tobeto.com/profilim/profilimi-duzenle/kisisel-bilgilerim"
+LOGIN_TOBETO_XLSX="data/loginTobeto.xlsx"
+LOGIN_BUTTON_XPATH="//*[@id='offcanvasExample']/div[2]/div[2]/div/a[1]"
+LOGIN_BUTTON_CLICK_XPATH="//*[@id='__next']/div/main/section/div/div/div[1]/div/form/button"
+E_MAIL= "email"
+PASSWORD_NAME = "password"
+PROFILIM="//*[@id='__next']/div/nav/div[1]/ul/li[2]"
+PROFIL_DUZENLE_SIMGE="//*[@id='__next']/div/main/div/div[1]/div/span"
+PROFIL_YABANCI_DILLERIM="//*[@id='__next']/div/main/section/div/div/div[1]/div/a[7]"
+KAYDET_BUTTON="//*[@id='__next']/div/main/section/div/div/div[2]/form/button"
+DOLDURULMASI_ZORUNLU_ALAN_KONTROL="//*[@id='__next']/div/main/section/div/div/div[2]/form/div/div[1]/p"
+DOLDURULMASI_ZORUNLU_ALAN_METNI="Doldurulması zorunlu alan*"
+DIL_SECIMI="//*[@id='__next']/div/main/section/div/div/div[2]/form/div/div[1]/select"
+
+
