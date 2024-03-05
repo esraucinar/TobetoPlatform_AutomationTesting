@@ -1,0 +1,16 @@
+# certificateConstants.py
+
+LOGIN_URL = "https://tobeto.com/giris"
+VALID_EMAIL = "Eliffacett.20@gmail.com"
+VALID_PASSWORD = "mnmnmnmn.123"
+EMAIL_TEXT_BOX_XPATH = "//input[@name='email']"
+PASSWORD_TEXT_BOX_XPATH = "//input[@name='password']"
+LOGIN_BUTTON_XPATH = "//button[contains(.,'Giriş Yap')]"
+NOTIFICATION_TAB_XPATH = "//button[@id='notification-tab']"
+PROFILIM_LINK_XPATH = "//a[contains(@href, '/profilim/')]"
+SERTIFIKALARIM_LINK_XPATH = "//a[contains(@href, '/profilim/sertifikalarim/')]"
+POPUP_BUTTON_XPATH = "//button[@class='popup-button']"
+CERTIFICATE_BOX_XPATH = "//div[@class='certificate-box']"
+CERTIFICATE_LIST_XPATH = "//ul[@class='certificate-list']/li"
+SAG_OK_XPATH = "//button[@class='sag-ok']"
+SOL_OK_XPATH = "//button[@class='sol-ok']"
